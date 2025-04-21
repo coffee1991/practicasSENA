@@ -6,27 +6,27 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif; /* Fuente moderna y legible */
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f7f6; /* Un fondo suave */
+    background-color: #f4f7f6;
     padding: 20px;
 }
 
 main {
-    max-width: 900px; /* Limita el ancho del contenido */
-    margin: 30px auto; /* Centra el contenido */
-    background-color: #fff; /* Fondo blanco para el contenido principal */
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
     padding: 20px 30px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 header {
     text-align: center;
     margin-bottom: 40px;
     padding: 20px;
-    background: linear-gradient(135deg, #6e8efb, #a777e3); /* Gradiente atractivo */
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
     color: #fff;
     border-radius: 8px;
 }
@@ -34,70 +34,78 @@ header {
 header h1 {
     font-weight: 600;
     font-size: 2.2em;
+    display: flex; /* Para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
 }
+
+header h1 .icon, header h1 .git-icon {
+    margin-right: 10px;
+    font-size: 1.1em; /* Ajusta según el icono */
+}
+
 
 /* Estilos para las secciones */
 section {
     margin-bottom: 35px;
     padding: 25px;
-    border: 1px solid #e0e0e0; /* Borde ligero */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: #ffffff; /* Fondo blanco para cada sección */
-    transition: box-shadow 0.3s ease; /* Transición suave para hover */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
 }
 
-section:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* Sombra más pronunciada al pasar el ratón */
+section:hover:not(.navigation-section):not(.comparison-table) { /* No aplicar hover a la sección de nav o tabla */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 section h2 {
     font-weight: 600;
     font-size: 1.6em;
-    color: #4a4a4a; /* Color oscuro pero no negro puro */
+    color: #4a4a4a;
     margin-bottom: 15px;
-    border-bottom: 2px solid #6e8efb; /* Línea de acento */
+    border-bottom: 2px solid #6e8efb;
     padding-bottom: 8px;
-    display: flex; /* Para alinear icono y texto */
-    align-items: center; /* Centrar verticalmente icono y texto */
+    display: flex;
+    align-items: center;
 }
 
 section h2 .icon {
-    margin-right: 10px; /* Espacio entre icono y texto */
-    font-size: 1.1em; /* Tamaño del icono */
-    color: #6e8efb; /* Color del icono */
+    margin-right: 10px;
+    font-size: 1.1em;
+    color: #6e8efb;
+    min-width: 1.5em; /* Asegura espacio para iconos */
+    text-align: center;
 }
-/* Ajuste específico para el icono de Bitbucket (imagen) */
 section h2 .icon img {
      height: 1em;
      vertical-align: middle;
 }
 
-
 p {
     margin-bottom: 15px;
-    color: #555; /* Color de texto ligeramente más suave */
+    color: #555;
 }
 
 ul {
-    list-style: none; /* Quitar viñetas por defecto */
+    list-style: none;
     padding-left: 0;
     margin-bottom: 15px;
 }
 
 li {
-    padding-left: 25px; /* Espacio para el marcador personalizado */
+    padding-left: 25px;
     position: relative;
     margin-bottom: 8px;
     color: #555;
 }
 
-/* Marcador personalizado para listas */
 li::before {
-    content: '✓'; /* Símbolo de check */
+    content: '✓';
     position: absolute;
     left: 0;
     top: 0;
-    color: #a777e3; /* Color del marcador */
+    color: #a777e3;
     font-weight: bold;
 }
 
@@ -106,7 +114,6 @@ strong {
     color: #333;
 }
 
-/* Estilo para los enlaces a las plataformas */
 .platform-link {
     display: inline-block;
     margin-top: 10px;
@@ -121,41 +128,159 @@ strong {
 
 .platform-link:hover {
     background-color: #5a78e4;
-    transform: translateY(-2px); /* Efecto ligero al pasar el ratón */
+    transform: translateY(-2px);
 }
+
+/* Estilos para la NUEVA sección de navegación en Index */
+.navigation-section {
+    background-color: #eef2ff; /* Un fondo ligeramente diferente */
+    border-color: #c7d2fe;
+}
+
+.topic-links {
+    display: grid; /* Usar grid para alinear las tarjetas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 20px; /* Espacio entre tarjetas */
+    margin-top: 15px;
+}
+
+.topic-link {
+    display: block;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit; /* Hereda color de texto normal */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.topic-link .icon {
+    font-size: 1.8em; /* Icono más grande */
+    margin-bottom: 10px;
+    display: block; /* Icono en su propia línea */
+    color: #a777e3; /* Color diferente para iconos de navegación */
+}
+
+.topic-link strong {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+.topic-link p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 0; /* Quitar margen inferior del párrafo */
+}
+
+/* Estilos para la tabla comparativa */
+.comparison-table table {
+    width: 100%;
+    border-collapse: collapse; /* Bordes unidos */
+    margin-top: 20px;
+}
+
+.comparison-table th, .comparison-table td {
+    border: 1px solid #ddd; /* Bordes de celda */
+    padding: 12px;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #f2f2f2; /* Fondo gris claro para encabezados */
+    font-weight: 600;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fondo alterno para filas */
+}
+
+.comparison-table td {
+    vertical-align: top; /* Alinear contenido arriba */
+}
+
 
 /* Footer */
 footer {
     text-align: center;
     margin-top: 40px;
-    padding: 15px;
+    padding: 20px; /* Más padding */
     color: #777;
     font-size: 0.9em;
+    border-top: 1px solid #e0e0e0; /* Línea separadora */
 }
 
-/* Icono de Git en el título (pseudo-elemento) */
-.git-icon::before {
-    content: '🌿'; /* Puedes cambiar este emoji por otro o un icono SVG/FontAwesome */
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 1.1em;
+.footer-link {
+    color: #6e8efb;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px; /* Espacio arriba */
+    display: inline-block; /* Para que el margen funcione */
 }
+
+.footer-link:hover {
+    text-decoration: underline;
+    color: #5a78e4;
+}
+
 
 /* Responsividad básica */
 @media (max-width: 768px) {
     body {
         padding: 10px;
     }
-
     main {
         padding: 15px;
     }
-
     header h1 {
         font-size: 1.8em;
+        flex-direction: column; /* Apilar icono y texto en pantallas pequeñas */
+        text-align: center;
     }
-
+     header h1 .icon, header h1 .git-icon {
+        margin-right: 0;
+        margin-bottom: 5px; /* Espacio si se apilan */
+    }
     section h2 {
         font-size: 1.4em;
     }
+    .comparison-table table, .comparison-table thead, .comparison-table tbody, .comparison-table th, .comparison-table td, .comparison-table tr {
+        display: block; /* Convertir tabla en bloques para móviles */
+    }
+    .comparison-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px; /* Ocultar encabezados originales */
+    }
+     .comparison-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+     }
+    .comparison-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; /* Espacio para la etiqueta */
+        text-align: right; /* Alinear texto a la derecha */
+    }
+     .comparison-table td:before {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label); /* Usar data-label para mostrar encabezado */
+        font-weight: bold;
+        text-align: left; /* Alinear etiqueta a la izquierda */
+    }
+    /* Añadir data-label en el HTML de la tabla para que funcione el CSS móvil */
+    /* Ejemplo: <td data-label="Colaboración">Muy Difícil</td> */
 }

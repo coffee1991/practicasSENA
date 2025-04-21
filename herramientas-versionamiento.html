@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas de Control de Versiones</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1><span class="icon">🛠️</span> Principales Herramientas de Control de Versiones</h1>
+</header>
+
+<main>
+  <section id="introduccion-herramientas">
+    <h2>Conociendo las Opciones</h2>
+    <p>
+      Existen diversas herramientas de software diseñadas para implementar los conceptos de control de versiones. Aunque comparten objetivos comunes, difieren en su arquitectura (distribuida vs. centralizada), características y popularidad. Aquí exploramos las más relevantes:
+    </p>
+  </section>
+
+  <section id="git-tool">
+    <h2><span class="icon">🌿</span> Git</h2>
+    <p>
+      El estándar de facto en el control de versiones moderno. Es un <strong>sistema distribuido (DVCS)</strong> conocido por su velocidad, flexibilidad y robusto manejo de ramas (branching) y fusiones (merging). Creado por Linus Torvalds para el desarrollo del kernel de Linux.
+    </p>
+    <p><strong>Puntos Clave:</strong></p>
+    <ul>
+      <li>Arquitectura distribuida: Cada desarrollador tiene una copia completa del repositorio.</li>
+      <li>Excelente rendimiento para la mayoría de las operaciones.</li>
+      <li>Modelo de datos basado en "snapshots" (instantáneas) en lugar de diferencias.</li>
+      <li>Extremadamente popular, con una vasta comunidad y ecosistema (GitHub, GitLab, Bitbucket).</li>
+      <li>Curva de aprendizaje moderada debido a su potencia y flexibilidad.</li>
+    </ul>
+    <a href="https://git-scm.com/" target="_blank" class="platform-link">Sitio Oficial de Git</a>
+  </section>
+
+  <section id="svn-tool">
+    <h2><span class="icon">🔗</span> Apache Subversion (SVN)</h2>
+    <p>
+      Durante muchos años, fue el rey del control de versiones <strong>centralizado (CVCS)</strong>. Aunque ha perdido popularidad frente a Git, sigue siendo utilizado en muchos entornos corporativos.
+    </p>
+    <p><strong>Puntos Clave:</strong></p>
+    <ul>
+      <li>Arquitectura centralizada: Requiere un servidor central.</li>
+      <li>Commits "atómicos": Un cambio se aplica por completo o no se aplica en absoluto.</li>
+      <li>Versiona directorios, renombrados y metadatos de archivos, lo cual era una mejora sobre su predecesor CVS.</li>
+      <li>El manejo de ramas y fusiones es considerado más complejo y menos eficiente que en Git.</li>
+      <li>Más simple de entender conceptualmente para algunos usuarios al principio.</li>
+    </ul>
+    <a href="https://subversion.apache.org/" target="_blank" class="platform-link">Sitio Oficial de SVN</a>
+  </section>
+
+  <section id="mercurial-tool">
+    <h2><span class="icon">⚖️</span> Mercurial (Hg)</h2>
+    <p>
+      Otro potente <strong>sistema distribuido (DVCS)</strong>, contemporáneo de Git. Comparte muchos de los beneficios de Git (rendimiento, distribuido, buen branching/merging) pero con un enfoque en la simplicidad y facilidad de uso.
+    </p>
+    <p><strong>Puntos Clave:</strong></p>
+    <ul>
+      <li>Arquitectura distribuida.</li>
+      <li>Considerado por algunos como más fácil de aprender que Git.</li>
+      <li>Implementado principalmente en Python.</li>
+      <li>Buen rendimiento y manejo de archivos binarios.</li>
+      <li>Aunque potente, su adopción es significativamente menor que la de Git. Facebook fue uno de sus mayores usuarios/contribuyentes.</li>
+    </ul>
+    <a href="https://www.mercurial-scm.org/" target="_blank" class="platform-link">Sitio Oficial de Mercurial</a>
+  </section>
+
+  <section id="perforce-tool">
+    <h2><span class="icon"> P </span> Perforce Helix Core</h2> <p>
+    Una solución de control de versiones <strong>comercial</strong>, popular en grandes empresas y especialmente en la industria de los videojuegos y semiconductores. Tradicionalmente centralizado, aunque ahora soporta flujos de trabajo distribuidos (DVCS-like).
+  </p>
+    <p><strong>Puntos Clave:</strong></p>
+    <ul>
+      <li>Muy buen rendimiento con repositorios extremadamente grandes y archivos binarios pesados (arte, modelos 3D, etc.).</li>
+      <li>Modelo de licenciamiento comercial (aunque ofrece versiones gratuitas para equipos pequeños).</li>
+      <li>Potentes herramientas de gestión y administración.</li>
+      <li>Arquitectura escalable para manejar miles de usuarios y terabytes de datos.</li>
+    </ul>
+    <a href="https://www.perforce.com/products/helix-core" target="_blank" class="platform-link">Sitio Oficial de Perforce</a>
+  </section>
+
+  <section id="otros-tool">
+    <h2><span class="icon">📜</span> Otros y Legado</h2>
+    <p>
+      Existen otras herramientas, algunas más antiguas como <strong>CVS (Concurrent Versions System)</strong>, predecesor de SVN y también centralizado, que aunque obsoleto, sentó bases importantes. Para necesidades muy específicas, pueden existir otras soluciones, pero Git domina ampliamente el panorama actual.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <p>Un vistazo a las herramientas que potencian el control de versiones.</p>
+  <p><a href="index.html" class="footer-link">Volver al Inicio</a></p>
+</footer>
+
+</body>
+</html>

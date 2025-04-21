@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versionamiento Local vs. Remoto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1><span class="icon">💻</span> Versionamiento Local vs. Centralizado vs. Distribuido</h1>
+</header>
+
+<main>
+    <section id="introduccion">
+        <h2>Comprendiendo el Control de Versiones</h2>
+        <p>
+            El control de versiones es un sistema que registra los cambios realizados en un archivo o conjunto de archivos a lo largo del tiempo, permitiendo recuperar versiones específicas más adelante. Es fundamental en el desarrollo de software para gestionar cambios, coordinar el trabajo en equipo y evitar la pérdida de información. Existen diferentes enfoques:
+        </p>
+    </section>
+
+    <section id="local">
+        <h2><span class="icon">🏠</span> Control de Versiones Local</h2>
+        <p>
+            Es el método más básico. Consiste en copiar archivos a otro directorio (quizás añadiendo la fecha al nombre) en la misma computadora. Herramientas simples como RCS (Revision Control System) automatizan un poco esto almacenando "parches" (diferencias entre archivos) en un formato especial en disco.
+        </p>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Simple de entender y usar para un solo usuario.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>Propenso a errores (fácil borrar o sobrescribir algo).</li>
+            <li>Difícil colaborar con otros desarrolladores.</li>
+            <li>Todo el historial reside en una única máquina (riesgo de pérdida).</li>
+        </ul>
+    </section>
+
+    <section id="centralizado">
+        <h2><span class="icon">🏢</span> Control de Versiones Centralizado (CVCS)</h2>
+        <p>
+            Estos sistemas (como <strong>Subversion (SVN)</strong> y <strong>CVS</strong>) utilizan un único servidor central que contiene todos los archivos versionados. Los desarrolladores "descargan" (checkout) la última versión de los archivos desde este servidor, realizan cambios y luego "suben" (commit) esos cambios de vuelta al servidor central.
+        </p>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li>Más fácil de administrar que los sistemas locales para equipos.</li>
+            <li>Todos saben en qué están trabajando los demás (hasta cierto punto).</li>
+            <li>Control granular sobre los permisos de usuario.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li><strong>Punto único de fallo:</strong> Si el servidor central cae, nadie puede colaborar ni guardar cambios versionados. Si el disco del servidor se corrompe y no hay copias de seguridad, se pierde todo el historial.</li>
+            <li>Generalmente se requiere conexión a la red para realizar la mayoría de las operaciones (commit, ver historial, comparar versiones).</li>
+        </ul>
+    </section>
+
+    <section id="distribuido">
+        <h2><span class="icon">🌍</span> Control de Versiones Distribuido (DVCS)</h2>
+        <p>
+            En los sistemas distribuidos (como <strong>Git</strong>, <strong>Mercurial</strong>), los clientes no solo descargan la última instantánea de los archivos, sino que <strong>replican completamente el repositorio</strong>, incluyendo todo su historial. Cada "clon" es una copia de seguridad completa de todos los datos.
+        </p>
+        <p><strong>Ventajas:</strong></p>
+        <ul>
+            <li><strong>Trabajo sin conexión:</strong> Puedes hacer commits, ver historial, crear ramas y más sin conexión a internet. Solo necesitas conexión para sincronizar (push/pull) con otros repositorios.</li>
+            <li><strong>Robustez:</strong> Si un servidor "muere", cualquier repositorio cliente puede usarse para restaurarlo. Cada checkout es una copia de seguridad completa.</li>
+            <li><strong>Flujos de trabajo flexibles:</strong> Permite diversos modelos de colaboración (centralizado, jerárquico, etc.).</li>
+            <li>Operaciones como branching y merging son generalmente mucho más rápidas y eficientes.</li>
+        </ul>
+        <p><strong>Desventajas:</strong></p>
+        <ul>
+            <li>La curva de aprendizaje inicial puede ser un poco más pronunciada que en los CVCS.</li>
+            <li>Clonar un repositorio con un historial muy largo o archivos muy grandes puede llevar más tiempo y espacio en disco inicialmente.</li>
+        </ul>
+    </section>
+
+    <section id="comparativa" class="comparison-table">
+        <h2><span class="icon">📊</span> Comparativa Rápida</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Característica</th>
+                <th>Local</th>
+                <th>Centralizado (CVCS)</th>
+                <th>Distribuido (DVCS)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td data-label="Característica">Colaboración</td>
+                <td data-label="Local">Muy Difícil</td>
+                <td data-label="Centralizado (CVCS)">Posible (dependiente del servidor)</td>
+                <td data-label="Distribuido (DVCS)">Fácil y Flexible</td>
+            </tr>
+            <tr>
+                <td data-label="Característica">Trabajo Offline</td>
+                <td data-label="Local">Sí (limitado a tu copia)</td>
+                <td data-label="Centralizado (CVCS)">Limitado (checkout/update)</td>
+                <td data-label="Distribuido (DVCS)">Completo (commit, branch, log, etc.)</td>
+            </tr>
+            <tr>
+                <td>Backup / Redundancia</td>
+                <td>Baja (tu máquina)</td>
+                <td>Media (servidor + backups)</td>
+                <td>Alta (cada clon es un backup)</td>
+            </tr>
+            <tr>
+                <td>Punto Único de Fallo</td>
+                <td>Sí (tu máquina)</td>
+                <td>Sí (servidor central)</td>
+                <td>No (por diseño)</td>
+            </tr>
+            <tr>
+                <td>Velocidad (operaciones comunes)</td>
+                <td>Variable</td>
+                <td>Más lento (depende red)</td>
+                <td>Muy Rápido (local)</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>Explorando los tipos de control de versiones.</p>
+    <p><a href="index.html" class="footer-link">Volver al Inicio</a></p>
+</footer>
+
+</body>
+</html>

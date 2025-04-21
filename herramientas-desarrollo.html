@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de Desarrollo para Codificación</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1><span class="icon">⌨️</span> Herramientas Esenciales para la Codificación de Software</h1>
+</header>
+
+<main>
+    <section id="introduccion-dev-tools">
+        <h2>El Arsenal del Programador</h2>
+        <p>
+            Más allá del control de versiones, los desarrolladores utilizan un conjunto variado de herramientas para escribir, depurar, probar y gestionar su código de manera eficiente y con alta calidad. Estas son algunas de las categorías y ejemplos más importantes:
+        </p>
+    </section>
+
+    <section id="editores-ides">
+        <h2><span class="icon">📝</span> Editores de Código e IDEs</h2>
+        <p>
+            Son las herramientas fundamentales donde se escribe el código. Varían desde simples editores de texto con resaltado de sintaxis hasta entornos de desarrollo integrados (IDEs) con múltiples funcionalidades.
+        </p>
+        <p><strong>Editores de Código Populares:</strong></p>
+        <ul>
+            <li><strong>Visual Studio Code (VS Code):</strong> Gratuito, ligero, muy extensible (miles de extensiones), multiplataforma. Excelente para desarrollo web y muchos otros lenguajes.</li>
+            <li><strong>Sublime Text:</strong> Ligero, rápido, personalizable, con una fuerte comunidad. Licencia comercial pero con evaluación gratuita ilimitada.</li>
+            <li><strong>Atom:</strong> Desarrollado por GitHub, gratuito, de código abierto, altamente personalizable. Algo más pesado que VS Code o Sublime.</li>
+            <li><strong>Notepad++:</strong> Exclusivo para Windows, muy ligero y rápido, bueno para ediciones rápidas y lenguajes diversos.</li>
+        </ul>
+        <p><strong>IDEs Populares:</strong></p>
+        <ul>
+            <li><strong>IntelliJ IDEA (JetBrains):</strong> Considerado uno de los mejores IDEs para Java, pero con soporte (plugins o versiones específicas como PyCharm, WebStorm, CLion) para casi cualquier lenguaje. Muy potente, con refactorización avanzada, depuración, etc. Modelo comercial con versión Community gratuita.</li>
+            <li><strong>Eclipse:</strong> IDE clásico de código abierto, muy popular para Java, pero extensible para C/C++, PHP, etc.</li>
+            <li><strong>Visual Studio (Microsoft):</strong> IDE completo principalmente para desarrollo .NET (C#, F#, VB.NET), C++, Python, Node.js y desarrollo de juegos (Unity). Diferente de VS Code. Versión Community gratuita.</li>
+            <li><strong>Xcode (Apple):</strong> El IDE oficial para desarrollo en el ecosistema Apple (iOS, macOS) usando Swift u Objective-C.</li>
+        </ul>
+    </section>
+
+    <section id="debuggers">
+        <h2><span class="icon">🐞</span> Depuradores (Debuggers)</h2>
+        <p>
+            Herramientas cruciales para encontrar y corregir errores (bugs) en el código. Permiten ejecutar el programa paso a paso, inspeccionar el valor de las variables, establecer puntos de interrupción (breakpoints) y analizar el flujo de ejecución.
+        </p>
+        <ul>
+            <li>La mayoría de los <strong>IDEs modernos incluyen depuradores integrados</strong> muy potentes y visuales.</li>
+            <li>Existen depuradores de línea de comandos como <strong>GDB</strong> (GNU Debugger) para C/C++ y otros lenguajes compilados.</li>
+            <li>Las herramientas de desarrollo de los navegadores web (Chrome DevTools, Firefox Developer Tools) incluyen excelentes depuradores para JavaScript.</li>
+        </ul>
+    </section>
+
+    <section id="linters-formatters">
+        <h2><span class="icon">🎨</span> Linters y Formateadores de Código</h2>
+        <p>
+            Ayudan a mantener la calidad y consistencia del código.
+        </p>
+        <ul>
+            <li><strong>Linters:</strong> Analizan el código en busca de errores potenciales, malas prácticas, y problemas de estilo (Ej: <strong>ESLint</strong> para JavaScript, <strong>Pylint</strong> o <strong>Flake8</strong> para Python, <strong>Stylelint</strong> para CSS).</li>
+            <li><strong>Formateadores:</strong> Re-escriben automáticamente el código para que siga unas reglas de estilo consistentes (indentación, espacios, saltos de línea, etc.) (Ej: <strong>Prettier</strong> para JavaScript/CSS/HTML y más, <strong>Black</strong> para Python, <strong>gofmt</strong> para Go).</li>
+            <li>Usar estas herramientas mejora la legibilidad y reduce errores tontos.</li>
+        </ul>
+    </section>
+
+    <section id="package-managers">
+        <h2><span class="icon">📦</span> Gestores de Paquetes</h2>
+        <p>
+            El software moderno casi siempre depende de librerías o frameworks externos. Los gestores de paquetes automatizan el proceso de descargar, instalar y gestionar estas dependencias.
+        </p>
+        <ul>
+            <li><strong>npm (Node Package Manager)</strong> y <strong>Yarn:</strong> Para el ecosistema JavaScript/Node.js.</li>
+            <li><strong>pip:</strong> El gestor estándar para paquetes Python.</li>
+            <li><strong>Maven</strong> y <strong>Gradle:</strong> Para proyectos Java (y otros basados en JVM como Kotlin, Groovy). Gestionan dependencias y también el proceso de construcción.</li>
+            <li><strong>Composer:</strong> Para PHP.</li>
+            <li><strong>RubyGems:</strong> Para Ruby.</li>
+            <li><strong>Cargo:</strong> Para Rust.</li>
+        </ul>
+    </section>
+
+    <section id="build-tools">
+        <h2><span class="icon">🏗️</span> Herramientas de Construcción (Build Tools)</h2>
+        <p>
+            Automatizan tareas repetitivas del proceso de desarrollo, como compilar código fuente, ejecutar pruebas, empaquetar la aplicación, minificar archivos (CSS, JS), optimizar imágenes, etc.
+        </p>
+        <ul>
+            <li>Para desarrollo web frontend: <strong>Webpack</strong>, <strong>Vite</strong>, <strong>Parcel</strong>, <strong>Rollup</strong>.</li>
+            <li>Para Java: <strong>Maven</strong> y <strong>Gradle</strong> (también son gestores de paquetes).</li>
+            <li>Herramientas más generales/clásicas: <strong>Make</strong>, <strong>Ant</strong>, <strong>CMake</strong> (especialmente para C/C++).</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>Equipándote con las herramientas adecuadas para codificar.</p>
+    <p><a href="index.html" class="footer-link">Volver al Inicio</a></p>
+</footer>
+
+</body>
+</html>
