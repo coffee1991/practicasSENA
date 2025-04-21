@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Git y Plataformas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1><span class="git-icon"></span> Git y Plataformas de Alojamiento de Repositorios</h1>
+</header>
+
+<main>
+    <section id="git">
+        <h2><span class="icon">🔧</span> ¿Qué es Git?</h2>
+        <p>
+            Git es un <strong>sistema de control de versiones distribuido</strong>, gratuito y de código abierto. Fue diseñado para manejar desde proyectos pequeños hasta muy grandes con velocidad y eficiencia. Su propósito principal es llevar un registro de los cambios realizados en los archivos de un proyecto a lo largo del tiempo, permitiendo a los desarrolladores volver a versiones anteriores, comparar cambios y, lo más importante, colaborar en equipo sin sobrescribir el trabajo de otros.
+        </p>
+        <p>Conceptos clave:</p>
+        <ul>
+            <li><strong>Repositorio (Repository):</strong> La base de datos donde se almacena el historial del proyecto.</li>
+            <li><strong>Commit:</strong> Una "instantánea" guardada de los cambios en el proyecto.</li>
+            <li><strong>Branch (Rama):</strong> Una línea de desarrollo independiente. Permite trabajar en nuevas características sin afectar la versión principal.</li>
+            <li><strong>Merge (Fusionar):</strong> Combinar los cambios de una rama en otra.</li>
+            <li><strong>Clone:</strong> Crear una copia local completa de un repositorio remoto.</li>
+        </ul>
+    </section>
+
+    <section id="github">
+        <h2><span class="icon">🐙</span> GitHub</h2>
+        <p>
+            GitHub es la <strong>plataforma de alojamiento de repositorios Git más popular</strong> del mundo. Ofrece una interfaz web amigable para gestionar repositorios Git, además de muchas herramientas para la colaboración y el desarrollo de software. Es propiedad de Microsoft.
+        </p>
+        <p>Características destacadas:</p>
+        <ul>
+            <li>Excelente para proyectos de código abierto y colaboración comunitaria.</li>
+            <li><strong>Pull Requests:</strong> Mecanismo principal para proponer y discutir cambios antes de fusionarlos.</li>
+            <li><strong>Issue Tracking:</strong> Sistema para reportar errores, solicitar características y gestionar tareas.</li>
+            <li><strong>GitHub Actions:</strong> Automatización de flujos de trabajo (CI/CD, pruebas, despliegues).</li>
+            <li><strong>GitHub Pages:</strong> Alojamiento gratuito para sitios web estáticos directamente desde un repositorio.</li>
+            <li>Amplia integración con otras herramientas y servicios.</li>
+        </ul>
+        <a href="https://github.com" target="_blank" class="platform-link">Visitar GitHub</a>
+    </section>
+
+    <section id="gitlab">
+        <h2><span class="icon">🦊</span> GitLab</h2>
+        <p>
+            GitLab es una <strong>plataforma completa de DevOps entregada como una única aplicación</strong>. Ofrece gestión de repositorios Git, pero va mucho más allá, integrando todo el ciclo de vida del desarrollo de software en un solo lugar. Tiene una versión comunitaria de código abierto que puedes auto-hospedar.
+        </p>
+        <p>Características destacadas:</p>
+        <ul>
+            <li><strong>Solución DevOps integral:</strong> Incluye CI/CD (GitLab CI), seguimiento de issues, wiki, monitoreo, seguridad y más, todo integrado.</li>
+            <li><strong>Opción de Auto-hospedaje (Self-Hosted):</strong> Control total sobre tu instancia de GitLab.</li>
+            <li><strong>Potente CI/CD incorporado:</strong> Considerado uno de los sistemas de integración continua más robustos.</li>
+            <li>Enfoque en el ciclo de vida completo del desarrollo (Planificación, Código, Build, Test, Release, Monitor).</li>
+            <li>Interfaz web clara y funcionalidades comparables a GitHub.</li>
+        </ul>
+        <a href="https://gitlab.com" target="_blank" class="platform-link">Visitar GitLab</a>
+    </section>
+
+    <section id="bitbucket">
+        <h2><span class="icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMDA1MkNjIiBkPSJNMjAuNDM0IDE5LjE3NWMtLjMgMS40NjktLjk4MyAyLjYwMy0yLjA1MSAzLjQwNmEzLjg5NyAzLjg5NyAwIDAxLTIuNDUyIDEuMDNoLTcuODcyYTMuODk3IDMuODk3IDAgMDEtMi40NTItMS4wM2MtMS4wNjgtLjc5OC0xLjc1MS0xLjkzNy0yLjA1LTMuNDA2Yy0uMDQyLS4yMDUtLjA2My0uNDE0LS4wNjMtLjYyN2MwLS4xMTUuMDEtLjIyLjAyOS0uMzJsMS4zNjEtNi45MDVsNC43MDkgNC4yNzl2LTguNzY1QzkuNTkgNi43MTYgOS41MSA2LjYxMiA5LjQ1MyA2LjUxYy0uMTMxLS4yMjctLjE0LS41MTMtLjAyOC0uNzU4YzEuNTIxLTMuMzI4IDQuNjM1LTUuNTQ3IDguMjMzLTUuNTQ3YzMuNTk4IDAgNi43MTIgMi4yMTkgOC4yMzMgNS41NDdjLjExMy4yNDUuMTA0LjUzLS4wMjcuNzU4Yy0uMDU4LjEwMS0uMTM3LjIwNS0uMjI4LjI4NnYxMy4xM2M0LjQ2LS4xNjggNC41OC0uMzQgNC41OC0uMzRjLjEyNS4yMTMuMTk1LjQ1OC4xOTUuNzExYzAgLjIxMy0uMDIxLjQyMi0uMDYzLjYyN20tMy4zNzgtNS4wNjRsLTEuMzYxIDYuOTFsLTEuMTc3LTEuMDY4di00Ljc2N2wtNC43MS00LjI3OXY0Ljc2NmwtMS4xNzYgMS4wNjhsLTEuMzYtNi45MWwxLjM2LTQuMDk5aDguNDE2bDEuMzYyIDQuMW0tNy45NzctMTEuNDc0Yy0uNDQ2IDAtLjgxLjMyNS0uODEuNzI1czMuODYxIDguNzY1IDMuODYxIDguNzY1bDQuNzA5LTQuMjc5di00LjQ4NmMwLS4zOTktLjM2My0uNzI1LS44MS0uNzI1aC02Ljk1WiIvPjwvc3ZnPg==" alt="Bitbucket icon" style="height: 1em; vertical-align: middle;"></span> Bitbucket</h2>
+        <p>
+            Bitbucket es el <strong>servicio de alojamiento de repositorios Git de Atlassian</strong>. Es conocido por su excelente integración con otras herramientas populares de Atlassian como Jira (seguimiento de issues y gestión de proyectos) y Trello (tableros Kanban).
+        </p>
+        <p>Características destacadas:</p>
+        <ul>
+            <li><strong>Integración profunda con Ecosistema Atlassian (Jira, Trello, Confluence).</strong></li>
+            <li>Ofrecía generosos planes gratuitos para repositorios privados (aunque ahora otras plataformas también lo hacen).</li>
+            <li><strong>Bitbucket Pipelines:</strong> Su solución integrada de CI/CD para automatizar builds, pruebas y despliegues.</li>
+            <li>Soporte tanto para Git como para Mercurial (aunque el foco principal es Git).</li>
+            <li>Interfaz limpia y orientada a equipos profesionales.</li>
+        </ul>
+        <a href="https://bitbucket.org" target="_blank" class="platform-link">Visitar Bitbucket</a>
+    </section>
+</main>
+
+<footer>
+    <p>Creado como parte de un proyecto educativo. ¡Feliz codificación!</p>
+</footer>
+
+</body>
+</html>
